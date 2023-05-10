@@ -1,5 +1,7 @@
 ﻿using System.Buffers;
 
+namespace StringBenchmarks;
+
 public class AnotherOneStringBuilder : IDisposable
 {
     private int _alreadyIn;
