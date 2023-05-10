@@ -10,7 +10,7 @@ public class AnotherOneStringBuilder : IDisposable
 
     public AnotherOneStringBuilder()
     {
-        _chars = ArrayPool<char>.Shared.Rent(ushort.MaxValue*byte.MaxValue);
+        _chars = ArrayPool<char>.Shared.Rent(ushort.MaxValue * byte.MaxValue);
     }
 
     public AnotherOneStringBuilder Append(string value)
