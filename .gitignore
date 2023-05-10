@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/StringBenchmarks/obj
+/StringBenchmarks/bin/Release/net7.0
+/.vs/StringBenchmarks
