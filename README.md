@@ -6,9 +6,13 @@ Benchmarks are inside. Here is the metrics:
 // * Summary *
 
 BenchmarkDotNet=v0.13.5, OS=Windows 10 (10.0.19045.2965/22H2/2022Update)
+
 Intel Core i5-6600K CPU 3.50GHz (Skylake), 1 CPU, 4 logical and 4 physical cores
+
 .NET SDK=7.0.203
+
   [Host]     : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+  
   DefaultJob : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
 
 
@@ -23,24 +27,19 @@ Intel Core i5-6600K CPU 3.50GHz (Skylake), 1 CPU, 4 logical and 4 physical cores
 |           Test_StringBuilder |    String[8] |      85.22 ns |     1.077 ns |     0.840 ns |   0.0943 |        - |        - |     296 B |
 | Test_AnotherOneStringBuilder |    String[8] |      97.71 ns |     1.395 ns |     1.237 ns |   0.0408 |        - |        - |     128 B |
 
-// * Hints *
-Outliers
-  Benchmark.Test_StringBuilder: Default           -> 1 outlier  was  removed (1.03 ms)
-  Benchmark.Test_AnotherOneStringBuilder: Default -> 2 outliers were removed (455.74 us, 493.49 us)
-  Benchmark.Test_StringBuilder: Default           -> 1 outlier  was  removed (1.71 us)
-  Benchmark.Test_AnotherOneStringBuilder: Default -> 4 outliers were removed (1.09 us..1.13 us)
-  Benchmark.Test_StringBuilder: Default           -> 2 outliers were removed (567.84 ns, 579.30 ns)
-  Benchmark.Test_AnotherOneStringBuilder: Default -> 2 outliers were removed (388.19 ns, 391.73 ns)
-  Benchmark.Test_StringBuilder: Default           -> 3 outliers were removed (93.32 ns..97.71 ns)
-  Benchmark.Test_AnotherOneStringBuilder: Default -> 1 outlier  was  removed (105.84 ns)
 
-// * Legends *
-  values    : Value of the 'values' parameter
-  Mean      : Arithmetic mean of all measurements
-  Error     : Half of 99.9% confidence interval
-  StdDev    : Standard deviation of all measurements
-  Gen0      : GC Generation 0 collects per 1000 operations
-  Gen1      : GC Generation 1 collects per 1000 operations
-  Gen2      : GC Generation 2 collects per 1000 operations
-  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
-  1 ns      : 1 Nanosecond (0.000000001 sec)
+Mean      : Arithmetic mean of all measurements
+
+Error     : Half of 99.9% confidence interval
+
+StdDev    : Standard deviation of all measurements
+
+Gen0      : GC Generation 0 collects per 1000 operations
+
+Gen1      : GC Generation 1 collects per 1000 operations
+
+Gen2      : GC Generation 2 collects per 1000 operations
+
+Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+
+1 ns      : 1 Nanosecond (0.000000001 sec)
