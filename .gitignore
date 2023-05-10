@@ -3,5 +3,5 @@
 ################################################################################
 
 /StringBenchmarks/obj
-/StringBenchmarks/bin/Release/net7.0
+/StringBenchmarks/bin
 /.vs/StringBenchmarks
