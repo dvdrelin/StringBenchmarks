@@ -1,9 +1,9 @@
 ﻿using BenchmarkDotNet.Attributes;
 
-namespace StringBenchmarks;
+namespace StringBenchmarks.Benchmarks;
 
 [MemoryDiagnoser]
-public class LongRunBenchmark
+public class LongRunAppendBenchmark
 {
     public IEnumerable<string[]> LongRunsValues()
     {
@@ -14,9 +14,9 @@ public class LongRunBenchmark
 
     [Benchmark]
     [ArgumentsSource(nameof(LongRunsValues))]
-    public string Benchmark_StringBuilder_LongRuns(string[] values) => Benchmark.InternalStringBuilder(values);
+    public string Benchmark_StringBuilder_LongRuns(string[] values) => SimpleAppendBenchmark.InternalStringBuilder(values);
 
     [Benchmark]
     [ArgumentsSource(nameof(LongRunsValues))]
-    public string Benchmark_AnotherOneStringBuilder_LongRuns(string[] values) => Benchmark.InternalAnotherOneStringBuilder(values);
+    public string Benchmark_AnotherOneStringBuilder_LongRuns(string[] values) => SimpleAppendBenchmark.InternalAnotherOneStringBuilder(values);
 }

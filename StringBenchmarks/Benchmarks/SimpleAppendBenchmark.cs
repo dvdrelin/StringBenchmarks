@@ -1,10 +1,10 @@
 ﻿using System.Text;
 using BenchmarkDotNet.Attributes;
 
-namespace StringBenchmarks;
+namespace StringBenchmarks.Benchmarks;
 
 [MemoryDiagnoser]
-public class Benchmark
+public class SimpleAppendBenchmark
 {
 
     public IEnumerable<string[]> Values()
@@ -18,7 +18,7 @@ public class Benchmark
     [ArgumentsSource(nameof(Values))]
     public string Benchmark_StringBuilder_100_Iterations(string[] values)
     {
-        var sb=new StringBuilder();
+        var sb = new StringBuilder();
         for (int i = 0; i < 100; i++)
         {
             sb.Append(InternalStringBuilder(values));

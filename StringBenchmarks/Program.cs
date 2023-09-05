@@ -1,5 +1,7 @@
 ﻿using BenchmarkDotNet.Running;
-using StringBenchmarks;
+using StringBenchmarks.Benchmarks;
 
-BenchmarkRunner.Run<Benchmark>();
-BenchmarkRunner.Run<LongRunBenchmark>();
+//BenchmarkRunner.Run<SimpleAppendBenchmark>();
+//BenchmarkRunner.Run<LongRunAppendBenchmark>();
+BenchmarkRunner.Run<InsertFullStackBenchmark>();
+//BenchmarkRunner.Run<InsertShortStackBenchmark>();
