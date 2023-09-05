@@ -16,7 +16,7 @@ public class AnotherOneStringBuilder : IDisposable
     public AnotherOneStringBuilder Append(string value)
     {
         _alreadyBuilt = null;
-        value.AsSpan().CopyTo(_chars!.AsSpan()[_alreadyIn..]);
+        value.AsSpan().CopyTo(_chars!.AsSpan().Slice(_alreadyIn, value.Length));
         _alreadyIn += value.Length;
         return this;
     }
