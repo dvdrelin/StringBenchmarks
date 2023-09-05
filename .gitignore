@@ -6,4 +6,6 @@
 /StringBenchmarks/bin
 /AnotherOneStringBuilderTests/obj
 /AnotherOneStringBuilderTests/bin
-/.vs/StringBenchmarks
+/.vs
+*.user
+/StringBenchmarks.sln.DotSettings.user
