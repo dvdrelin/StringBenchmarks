@@ -9,7 +9,7 @@ public class LongRunBenchmark
     {
         yield return Enumerable.Range(0, 25).Select(_ => "abcdefghijklmnopqrstuvwxyz").ToArray();
         yield return Enumerable.Range(0, 100).Select(_ => "abcdefghijklmnopqrstuvwxyz").ToArray();//[0]x4
-        yield return Enumerable.Range(0, 400).Select(_ => "abcdefghijklmnopqrstuvwxyz").ToArray();//[0]x4x4 == [1]x4+1
+        yield return Enumerable.Range(0, 401).Select(_ => "abcdefghijklmnopqrstuvwxyz").ToArray();//[0]x4x4 == [1]x4+1
     }
 
     [Benchmark]
