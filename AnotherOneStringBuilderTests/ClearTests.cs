@@ -1,4 +1,4 @@
-﻿namespace AppendTests;
+﻿namespace AnotherOneStringBuilderTests;
 
 public class ClearTests
 {

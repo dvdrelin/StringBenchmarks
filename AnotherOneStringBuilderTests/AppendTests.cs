@@ -1,7 +1,7 @@
 
 using System.Text;
 
-namespace AppendTests;
+namespace AnotherOneStringBuilderTests;
 
 public class AppendTests
 {
